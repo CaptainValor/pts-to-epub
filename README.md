@@ -2,7 +2,9 @@
 
 # How to Remove Content Using RegEx in Sigil
 
-1. Double-click into first HTM file
+This guide assumes you've already added your HTML files into Sigil.
+
+1. Double-click into first HTML file
 2. Click top line of file
 3. Click "Find & Replace"
 4. Select "Regex" and "All HTML Files" at the bottom
@@ -12,6 +14,11 @@
 8. Repeat Steps 5-7 for each desired operation
 
 NOTE: Unless otherwise specified, the "Replace" field is always left blank
+
+#### Resources for RegEx
+
+Online RegEx reference and playground
+https://regexr.com/
 
 
 ## Table of Contents
