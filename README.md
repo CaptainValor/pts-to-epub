@@ -23,7 +23,7 @@ NOTE: Unless otherwise specified, the "Replace" field is always left blank
 
 # Table of Contents
 
-I've had the best results using the "Up Level 1" option in "Generate Table of Contents"
+I've had the best results using the "Up to Level 1" option in "Generate Table of Contents"
 
 -------------------------------
 
