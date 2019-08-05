@@ -29,16 +29,19 @@ DotAll = OFF | Wrap = ON
 
 ### Remove Nav
 DotAll = OFF | Wrap = ON
+
 `<p class="ctr f2">.*</p>`
 
 
 ### Remove Boilerplate
 DotAll = ON | Wrap = ON
+
 `<h4 class="ctr.*</span></h4>`
 
 
 ### Remove Footers A
 DotAll = ON | Wrap = ON
+
 `<p class="ctr"><a href="\.\.\/\.\.\/\.\.\/backmatter.*Statement<\/a><\/p>`
 
 
@@ -49,16 +52,19 @@ DotAll = ON | Wrap = ON
 
 ### Remove License Links
 DotAll = ON | Wrap = ON
+
 `Commercial.*Use</a>\.</p>`
 
 
 ### Remove Translation Links
 DotAll = OFF | Wrap = ON
+
 `<span class="f3">\[<a .*\]</span>`
 
 
 ### Remove Inline Images
 DotAll = OFF | Wrap = ON
+
 `<p><img src="\..*</p>`
 
 
@@ -66,15 +72,20 @@ DotAll = OFF | Wrap = ON
 DotAll = OFF | Wrap = ON
 
 Find:
+
 `<a href="\.\.\/\.\.\/\.\.\/.*>(\w.*)<\/a>`
 
 Replace:
+
 `\1`
 
 
 ### Fix Most External Links
 DotAll = OFF | Wrap = ON
 Find:
+
 `\.\.\/\.\.\/\.\.\/`
+
 Replace:
+
 `http://www.buddhadust.net/`
