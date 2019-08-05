@@ -85,6 +85,7 @@ Replace:
 
 
 ### Fix Most External Links
+_(alternative to removal, doesn't work for all though)_
 DotAll = OFF | Wrap = ON
 
 Find:
