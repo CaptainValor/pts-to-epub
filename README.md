@@ -20,12 +20,6 @@ NOTE: Unless otherwise specified, the "Replace" field is always left blank
 * Online RegEx reference and playground: https://regexr.com/
 * Excellent text editor that supports RegEx: https://www.sublimetext.com/3
 
-- - -
-
-# Table of Contents
-
-I've had the best results using the "Up to Level 1" option in "Generate Table of Contents"
-
 -------------------------------
 
 # Expressions I've Figured Out So Far
