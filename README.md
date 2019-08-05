@@ -17,8 +17,7 @@ NOTE: Unless otherwise specified, the "Replace" field is always left blank
 
 ### Resources for RegEx
 
-Online RegEx reference and playground
-https://regexr.com/
+* Online RegEx reference and playground: https://regexr.com/
 
 - - -
 
@@ -28,6 +27,7 @@ I've had the best results using the "Up Level 1" option in "Generate Table of Co
 
 -------------------------------
 
+# Expressions I've Figured Out So Far
 
 ### Remove Homepage line
 DotAll = OFF | Wrap = ON
