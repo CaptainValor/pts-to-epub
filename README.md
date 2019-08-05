@@ -23,6 +23,7 @@ I've had the best results using the "Up Level 1" option in "Generate Table of Co
 
 ### Remove Homepage line
 DotAll = OFF | Wrap = ON
+
 `<p class="ctr"><img.*</p>`
 
 
