@@ -18,6 +18,7 @@ NOTE: Unless otherwise specified, the "Replace" field is always left blank
 ### Resources for RegEx
 
 * Online RegEx reference and playground: https://regexr.com/
+* Excellent text editor that supports RegEx: https://www.sublimetext.com/3
 
 - - -
 
