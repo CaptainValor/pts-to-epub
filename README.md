@@ -47,6 +47,7 @@ DotAll = ON | Wrap = ON
 
 ### Remove Footers B
 DotAll = ON | Wrap = ON
+
 `<p class="fine ctr c">.*Statement<\/a><\/p>`
 
 
