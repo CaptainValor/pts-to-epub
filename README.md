@@ -15,13 +15,14 @@ This guide assumes you've already added your HTML files into Sigil.
 
 NOTE: Unless otherwise specified, the "Replace" field is always left blank
 
-#### Resources for RegEx
+### Resources for RegEx
 
 Online RegEx reference and playground
 https://regexr.com/
 
+- - -
 
-## Table of Contents
+# Table of Contents
 
 I've had the best results using the "Up Level 1" option in "Generate Table of Contents"
 
