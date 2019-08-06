@@ -30,16 +30,35 @@ DotAll = OFF | Wrap = ON
 `<p class="ctr"><img.*</p>`
 
 
+### Remove Headers
+DotAll = ON | Wrap = ON
+
+`<head>.*<\/head>`
+
+
 ### Remove Nav
 DotAll = OFF | Wrap = ON
 
 `<p class="ctr f2">.*</p>`
 
 
+### Add Sutta # Before Title
+
+Find:
+
+`(<h4 class="ctr">)(Sutta \d)(.*)(Discourse)(.*)<\/h1>`
+
+Replace:
+
+<h1>\2 - \4\5</h1>
+
+
 ### Remove Boilerplate
 DotAll = ON | Wrap = ON
 
 `<h4 class="ctr.*</span></h4>`
+or
+`<h4 class="ctr.*<\/h4>`
 
 
 ### Remove Footers A
