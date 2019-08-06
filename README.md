@@ -24,79 +24,78 @@ NOTE: Unless otherwise specified, the "Replace" field is always left blank
 
 # Expressions I've Figured Out So Far
 
-### Remove Homepage line
-DotAll = OFF | Wrap = ON
-
-`<p class="ctr"><img.*</p>`
-
-
-### Remove Headers
+### 1. Remove Headers
 DotAll = ON | Wrap = ON
 
 `<head>.*<\/head>`
 
 
-### Remove Nav
+### 2. Remove Homepage line
+DotAll = OFF | Wrap = ON
+
+`<p class="ctr"><img.*</p>`
+
+
+### 3. Remove Nav
 DotAll = OFF | Wrap = ON
 
 `<p class="ctr f2">.*</p>`
 
 
-### Add Sutta # Before Title
+### 9. Add Sutta # Before Title
+DotAll = ON | Wrap = ON
 
 Find:
 
-`(<h4 class="ctr">)(Sutta \d)(.*)(Discourse)(.*)<\/h1>`
+`(<h4 class="ctr">)(Sutta \d+)(.*)(Discourse)(.*)<\/h1>`
 
 Replace:
 
-<h1>\2 - \4\5</h1>
+`<h1>\2 - \4\5</h1>`
 
 
-### Remove Boilerplate
+### 10. Remove Boilerplate
 DotAll = ON | Wrap = ON
 
-`<h4 class="ctr.*</span></h4>`
-or
 `<h4 class="ctr.*<\/h4>`
 
 
-### Remove Footers A
+### 8a? Remove Footers A
 DotAll = ON | Wrap = ON
 
 `<p class="ctr"><a href="\.\.\/\.\.\/\.\.\/backmatter.*Statement<\/a><\/p>`
 
 
-### Remove Footers B
+### 8b? Remove Footers B
 DotAll = ON | Wrap = ON
 
-`<p class="fine ctr c">.*Statement<\/a><\/p>`
+`<p class="fine ctr c">.*Statement<\/p>`
 
 
-### Remove License Links
+### 7. Remove License Links
 DotAll = ON | Wrap = ON
 
-`Commercial.*Use</a>\.</p>`
+`Commercial.*Use\.<\/p>`
 
 
-### Remove Translation Links
+### 4. Remove Translation Links
 DotAll = OFF | Wrap = ON
 
-`<span class="f3">\[<a .*\]</span>`
+`<span class="f3">\[<a .*\]<\/span>`
 
 
-### Remove Inline Images
+### 6. Remove Inline Images
 DotAll = OFF | Wrap = ON
 
 `<p><img src="\..*</p>`
 
 
-### Remove Other Text Links (MUST BE DONE LAST)
+### 5. Remove Other Text Links (MUST BE DONE LAST)
 DotAll = OFF | Wrap = ON
 
 Find:
-
-`<a href="\.\.\/\.\.\/\.\.\/.*>(\w.*)<\/a>`
+* a. Italic: `<a href="\.\.\/\.\.\/\.\.\/.*<i>(\w.*)</\i><\/a>`
+* b. Regular: `<a href="\.\.\/\.\.\/\.\.\/.*>(\w.*)<\/a>`
 
 Replace:
 
