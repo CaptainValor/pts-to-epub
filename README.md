@@ -42,7 +42,7 @@ DotAll = OFF | Wrap = ON
 `<p class="ctr f2">.*</p>`
 
 
-### 9. Add Sutta # Before Title
+### 4. Add Sutta # Before Title
 DotAll = ON | Wrap = ON
 
 Find:
@@ -60,37 +60,55 @@ DotAll = ON | Wrap = ON
 `<h4 class="ctr.*<\/h4>`
 
 
-### 8a? Remove Footers A
+### 9. Remove Footers
+DotAll = ON | Wrap = ON
+
+`<p class="fine ctr c">.*<\/p>`
+
+
+### // 8a? Remove Footers A
 DotAll = ON | Wrap = ON
 
 `<p class="ctr"><a href="\.\.\/\.\.\/\.\.\/backmatter.*Statement<\/a><\/p>`
 
 
-### 8b? Remove Footers B
+### // 8b? Remove Footers B
 DotAll = ON | Wrap = ON
 
 `<p class="fine ctr c">.*Statement<\/p>`
 
 
-### 7. Remove License Links
-DotAll = ON | Wrap = ON
+### 8a. Fix CC Licence Links
+DotAll = OFF | Wrap = ON
 
-`Commercial.*Use\.<\/p>`
+Find:
+
+`(<a href="http:\/\/creativecommons.*>)(<img.*)</a>`
+
+Replace:
+
+`\1Creative Commons Licence</a>`
 
 
-### 4. Remove Translation Links
+### 8b. Remove License Details Text
+DotAll = OFF | Wrap = ON
+
+`For details see \.`
+
+
+### 5. Remove Translation Links
 DotAll = OFF | Wrap = ON
 
 `<span class="f3">\[<a .*\]<\/span>`
 
 
-### 6. Remove Inline Images
+### 7. Remove Inline Images
 DotAll = OFF | Wrap = ON
 
 `<p><img src="\..*</p>`
 
 
-### 5. Remove Other Text Links (MUST BE DONE LAST)
+### 6. Remove Other Text Links (MUST BE DONE LAST)
 DotAll = OFF | Wrap = ON
 
 Find:
@@ -100,6 +118,18 @@ Find:
 Replace:
 
 `\1`
+
+
+### 11. Remove Brackets on Endnotes
+DotAll = OFF | Wrap = ON
+
+Find:
+
+`<sup>\[(.*)\]<\/sup>`
+
+Replace:
+
+`<sup>\1</sup>`
 
 
 ### Fix Most External Links
