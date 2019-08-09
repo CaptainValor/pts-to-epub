@@ -47,35 +47,35 @@ DotAll = ON | Wrap = ON
 
 Find:
 
-`(<h4 class="ctr">)(Sutta \d+)(.*)(Discourse)(.*)<\/h1>`
+`(<h4 class="ctr">).*(Sutta \d+)(.*)(<h1>)(.*)<\/h1>`
 
 Replace:
 
-`<h1>\2 - \4\5</h1>`
+`<h1>\2 - \5</h1>`
 
 
-### 10. Remove Boilerplate
-DotAll = ON | Wrap = ON
+### 5. Remove Translation Links
+DotAll = OFF | Wrap = ON
 
-`<h4 class="ctr.*<\/h4>`
-
-
-### 9. Remove Footers
-DotAll = ON | Wrap = ON
-
-`<p class="fine ctr c">.*<\/p>`
+`<span class="f3">\[<a .*\]<\/span>`
 
 
-### // 8a? Remove Footers A
-DotAll = ON | Wrap = ON
+### 6. Remove Other Text Links (italics still throw some errors)
+DotAll = OFF | Wrap = ON
 
-`<p class="ctr"><a href="\.\.\/\.\.\/\.\.\/backmatter.*Statement<\/a><\/p>`
+Find:
+* a. Italic: `<a href="\.\.\/\.\.\/\.\.\/.*<i>(\w.*)</\i><\/a>`
+* b. Regular: `<a href="\.\.\/\.\.\/\.\.\/.*>(\w.*)<\/a>`
+
+Replace:
+
+`\1`
 
 
-### // 8b? Remove Footers B
-DotAll = ON | Wrap = ON
+### 7. Remove Inline Images
+DotAll = OFF | Wrap = ON
 
-`<p class="fine ctr c">.*Statement<\/p>`
+`<p><img src="\..*</p>`
 
 
 ### 8a. Fix CC Licence Links
@@ -93,34 +93,22 @@ Replace:
 ### 8b. Remove License Details Text
 DotAll = OFF | Wrap = ON
 
-`For details see \.`
+`For details see.*Use\.`
 
 
-### 5. Remove Translation Links
-DotAll = OFF | Wrap = ON
+### 9. Remove Footers
+DotAll = ON | Wrap = ON
 
-`<span class="f3">\[<a .*\]<\/span>`
-
-
-### 7. Remove Inline Images
-DotAll = OFF | Wrap = ON
-
-`<p><img src="\..*</p>`
+`<p class="fine ctr c">.*<\/p>`
 
 
-### 6. Remove Other Text Links (MUST BE DONE LAST)
-DotAll = OFF | Wrap = ON
+### 10. Remove Boilerplate
+DotAll = ON | Wrap = ON
 
-Find:
-* a. Italic: `<a href="\.\.\/\.\.\/\.\.\/.*<i>(\w.*)</\i><\/a>`
-* b. Regular: `<a href="\.\.\/\.\.\/\.\.\/.*>(\w.*)<\/a>`
-
-Replace:
-
-`\1`
+`<h4 class="ctr.*<\/h4>`
 
 
-### 11. Remove Brackets on Endnotes
+### 11. Remove Brackets on Endnotes (partially working)
 DotAll = OFF | Wrap = ON
 
 Find:
@@ -130,6 +118,18 @@ Find:
 Replace:
 
 `<sup>\1</sup>`
+
+
+### // 8a? Remove Footers A
+DotAll = ON | Wrap = ON
+
+`<p class="ctr"><a href="\.\.\/\.\.\/\.\.\/backmatter.*Statement<\/a><\/p>`
+
+
+### // 8b? Remove Footers B
+DotAll = ON | Wrap = ON
+
+`<p class="fine ctr c">.*Statement<\/p>`
 
 
 ### Fix Most External Links
